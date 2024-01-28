@@ -1,14 +1,16 @@
 ## Installing:
 
 1. Creating environment:
-   <code>python -m venv {name of the folder}</code>
+   `python -m venv {name of the folder}`
    
 2. Activating environment:
-   <code>source {name of the folder}/Scripts/activate</code>
+   `source {name of the folder}/Scripts/activate`
 
 3. Packages:
-   <code>pip install -r requirements.txt</code>
+   `pip install -r requirements.txt`
    
 4. Creating executable:
-   <code>pyinstaller pwd_manager.py</code>
+   `pyinstaller pwd_manager.py`
+
+5. Run the executable from the `dist` folder
 
