@@ -4,7 +4,7 @@
    <code>python -m venv {name of the folder}</code>
    
 2. Activating environment:
-   <code>Source {name of the folder}/script/activate</code>
+   <code>source {name of the folder}/Scripts/activate</code>
 
 3. Packages:
    <code>pip isntall -r requirement.txt</code>
