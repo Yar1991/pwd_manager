@@ -87,13 +87,18 @@ def greeting() -> None:
                     attempts -= 1
     else:
         master_pwd = pwinput(
-            "Create the master password (min length 7 characters): ").encode()
-        hashed_master_pwd = bcrypt.hashpw(master_pwd, bcrypt.gensalt())
-        f_key = Fernet.generate_key()
-        fernet = Fernet(f_key)
-        with open("./.key.key", mode="a") as f:
-            f.write(f"{hashed_master_pwd.decode()}\n{f_key.decode()}")
-        pwd_manager(fernet)
+            "Create the master password (min length 8 characters): ").strip()
+        if len(master_pwd) >= 8:
+            hashed_master_pwd = bcrypt.hashpw(
+                master_pwd.encode(), bcrypt.gensalt())
+            f_key = Fernet.generate_key()
+            fernet = Fernet(f_key)
+            with open("./.key.key", mode="a") as f:
+                f.write(f"{hashed_master_pwd.decode()}\n{f_key.decode()}")
+            pwd_manager(fernet)
+        else:
+            print("\nThe length of the password should be at least 8 characters")
+            greeting()
 
 
 greeting()
