@@ -7,7 +7,7 @@
    <code>source {name of the folder}/Scripts/activate</code>
 
 3. Packages:
-   <code>pip install -r requirement.txt</code>
+   <code>pip install -r requirements.txt</code>
    
 4. Creating executable:
    <code>pyinstaller pwd_manager.py</code>
